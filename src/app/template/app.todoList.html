@@ -1,0 +1,13 @@
+
+<form name="firstForm">
+    <div class="form-group">
+        <label>User ID:</label>
+        <input type="text" class="form-control" name="username" [ngModel]="username" (ngModelChange) = "username = $event" />        
+        <br/><br/>
+        <label>Random Data:
+            <input type="text" class="form-control" name="randomData" (keyup)="sendDataToParent($event)"/>
+        </label>
+    </div> 
+    <p>{{username}}</p>
+    <button class="btn btn-default" type="button" (click)="getUserId()">Login</button>
+</form>
